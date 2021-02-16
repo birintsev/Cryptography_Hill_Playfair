@@ -29,6 +29,7 @@ public class Playfair implements CommandLineRunner {
         return args -> new Playfair().run(args);
     }
 
+    @Override
     public void run(String[] args) {
         final char[][] table = {
             {'Б', 'Р', 'М', 'Х', 'В', 'О'},
