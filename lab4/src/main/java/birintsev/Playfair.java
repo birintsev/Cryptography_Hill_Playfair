@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class Playfair implements CommandLineRunner {
 
     static final char BIGRAM_BALANCING_CHAR = 'Х';
@@ -24,8 +24,8 @@ public class Playfair implements CommandLineRunner {
         SpringApplication.run(Playfair.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner() {
+    //@Bean
+    CommandLineRunner playfairCommandLineRunner() {
         return args -> new Playfair().run(args);
     }
 

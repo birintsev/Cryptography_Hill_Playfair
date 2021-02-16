@@ -12,7 +12,7 @@
     <artifactId>lab4</artifactId>
 
 	<properties>
-        <start-class>birintsev.Playfair</start-class>
+        <start-class>birintsev.Hill</start-class>
     </properties>
 
 </project>
