@@ -81,6 +81,7 @@ public class Hill implements CommandLineRunner {
     private String encryptBigram(String bigram, int[][] key) {
         int[] bigramCharCodes;
         int[] encryptedCharCodes;
+        String encryptedBigram;
 
         if (bigram == null || bigram.length() != 2) {
             throw new IllegalArgumentException(
@@ -110,9 +111,17 @@ public class Hill implements CommandLineRunner {
             );
         }
 
-        return ""
+        encryptedBigram = ""
             + CODES_CHAR.get(encryptedCharCodes[0])
             + CODES_CHAR.get(encryptedCharCodes[1]);
+
+        LOGGER.info(
+            "Bigram: " + bigram
+                + "; Codes: " + Arrays.toString(bigramCharCodes)
+                + "; Encrypted codes: " + Arrays.toString(encryptedCharCodes)
+                + "; Encrypted bigram: " + encryptedBigram);
+
+        return encryptedBigram;
     }
 
     private int[] multByMod(int[][] key, int[] bigramCharCodes, int mod) {
